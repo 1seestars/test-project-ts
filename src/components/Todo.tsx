@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react'
+import { ITodoProps } from '../interfaces'
 
-const Todo: React.FunctionComponent = ({ title }) => (
-    <li>{title}</li>
+const Todo: React.FC<ITodoProps> = ({ todo }) => (
+    <li key={todo.id}>{todo.title}</li>
 )
 
 export default Todo

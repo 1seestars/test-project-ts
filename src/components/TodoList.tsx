@@ -1,13 +1,14 @@
 import React from 'react'
-import Todo from "./Todo";
+import Todo from './Todo'
+import { ITodo } from '../interfaces'
+import { ITodoListProps } from '../interfaces'
 
-const TodoLIst: React.FC = ({ todos }) => (
+const TodoLIst: React.FC<ITodoListProps> = ({ todos }) => (
     <ul>
-        {todos.map(todo => (<Todo title={todo.title} />))}
+        {todos.map((todo: ITodo) => (
+            <Todo todo={todo} />
+        ))}
     </ul>
-    )
-
+)
 
 export default TodoLIst
-
-
