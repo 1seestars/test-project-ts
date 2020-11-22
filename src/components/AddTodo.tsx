@@ -3,6 +3,7 @@ import { ITodo } from '../interfaces'
 import { IAddTodoProps } from '../interfaces'
 
 const uniqid = require('uniqid')
+const moment = require('moment')
 
 const AddTodo: React.FC<IAddTodoProps> = ({ addTodo }) => {
     const [value, setValue] = useState<string>('')
@@ -14,7 +15,7 @@ const AddTodo: React.FC<IAddTodoProps> = ({ addTodo }) => {
             const newTodo: ITodo = {
                 id: uniqid(),
                 title: value.trim(),
-                createdAt: `${Date.now()}`
+                createdAt: moment().format('DD.MM.YYYY h:mm:ss')
             }
 
             addTodo(newTodo)

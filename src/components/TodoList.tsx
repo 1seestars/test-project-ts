@@ -5,7 +5,7 @@ import { ITodoListProps } from '../interfaces'
 
 const TodoLIst: React.FC<ITodoListProps> = ({ todos }) => (
     <ul>
-        {todos.map((todo: ITodo) => (
+        {(todos as Array<ITodo>).map((todo) => (
             <Todo todo={todo} />
         ))}
     </ul>
