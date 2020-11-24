@@ -1,5 +1,9 @@
 import React from 'react'
-import { ITodoProps } from '../interfaces'
+import { ITodo } from '../interfaces'
+
+interface ITodoProps {
+    todo: ITodo
+}
 
 const Todo: React.FC<ITodoProps> = ({ todo }) => (
     <li key={todo.id}>

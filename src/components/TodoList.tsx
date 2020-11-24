@@ -1,7 +1,10 @@
 import React from 'react'
 import Todo from './Todo'
 import { ITodo } from '../interfaces'
-import { ITodoListProps } from '../interfaces'
+
+interface ITodoListProps {
+    todos: Array<ITodo> | []
+}
 
 const TodoLIst: React.FC<ITodoListProps> = ({ todos }) => (
     <ul>

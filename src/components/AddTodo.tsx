@@ -1,9 +1,11 @@
 import React, { FormEvent, useState } from 'react'
 import { ITodo } from '../interfaces'
-import { IAddTodoProps } from '../interfaces'
+import uniqid from 'uniqid'
+import moment from 'moment'
 
-const uniqid = require('uniqid')
-const moment = require('moment')
+interface IAddTodoProps {
+    addTodo: (todo: ITodo) => void
+}
 
 const AddTodo: React.FC<IAddTodoProps> = ({ addTodo }) => {
     const [value, setValue] = useState<string>('')
